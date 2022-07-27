@@ -24,6 +24,9 @@ git clone https://github.com/xenxynon-lab-404/manifest --depth=1 -b ci .repo/loc
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all) || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 
 # local manifest
+rm -rf device/xiaomi
+git clone https://github.com/xenxynon-lab-404/device_xiaomi_lavender device/xiaomi/lavender
+git clone https://github.com/xenxynon-lab-404/device_xiaomi_sdm660-common device/xiaomi/sdm660-common
 
 tg "$rom_name source sync completed!
 Total Size: $(du -sh /tmp/rom | cut -d - -f 1 | cut -d / -f 1)
