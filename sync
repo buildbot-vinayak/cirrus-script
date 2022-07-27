@@ -17,7 +17,7 @@ bash ~/git_cookies.sh
 fi
 
 # Sync source
-repo init --depth=1 --no-repo-verify -u https://github.com/P-404/android_manifest -b lab -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/P-404/android_manifest -b shinka -g default,-mips,-darwin,-notdefault
 git clone https://github.com/xenxynon-lab-404/manifest --depth=1 -b 404 .repo/local_manifests
 
 # Sync source without unnecessary messages, try with -j30 first, if fails, it will try again
